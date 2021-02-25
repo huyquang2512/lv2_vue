@@ -5,7 +5,7 @@
 <button type="button" class="btn btn-success">Search</button><br>
 <br>
     <h3>List Blog</h3>
-    <table class="table table-bordered">
+        <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -26,75 +26,78 @@
       <td>3</td>
       <td>4</td>
       <td>5</td>
-      <td>5</td>
-      <td>6</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-         <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+ <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
     </tr>
+    <tr>
+    <th scope="row">1</th>
+ <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+        <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+    </tr>
+    <tr>
+    <th scope="row">1</th>
+    <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+     <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+    </tr>
+    <tr>
     <th scope="row">1</th>
       <td>2</td>
       <td>2</td>
       <td>3</td>
       <td>4</td>
       <td>5</td>
-      <td>5</td>
-      <td>6</td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-         <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <th scope="row">1</th>
-      <td>2</td>
+       <td>2</td>
       <td>2</td>
       <td>3</td>
       <td>4</td>
       <td>5</td>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-         <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <th scope="row">1</th>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-         <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><a href="">Edit</a></td>
+      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
     </tr>
   </tbody>
 </table>
@@ -102,7 +105,6 @@
 </template>
 
 <script>
-import Header from "./header.vue"
 
 export default {
   components : {
@@ -120,9 +122,4 @@ export default {
 td{
   border: 2px solid black;
 }
-.table-bordered{
-
-}
-
-
 </style>

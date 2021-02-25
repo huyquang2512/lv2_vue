@@ -1,17 +1,9 @@
 <template>
-  <div class="container">
-   <header-index></header-index>
-  </div>
 </template>
 
 <script>
-import Header from "./header.vue"
 
 export default {
-  components : {
-    "header-index": Header,
-
-  }
 }
 </script>
 

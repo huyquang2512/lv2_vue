@@ -1,5 +1,5 @@
 <template>
-  <div class="blog">
+  <div class="blog col-8">
     <h3>List Blog</h3>
     <table class="table table-bordered">
   <thead>
@@ -15,83 +15,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
+    <tr  v-for="blogs in dataBlog" :key="blogs.id">
+      <th scope="row">{{blogs.id}}</th>
+      <td>{{blogs.title}}</td>
       <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
- <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-    <th scope="row">1</th>
- <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-        <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-    <th scope="row">1</th>
-    <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-     <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-    <th scope="row">1</th>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="">Edit</a></td>
-      <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-       <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
+      <td>{{blogs.public}}</td>
+      <td></td>
+  <td>{{blogs.data_pubblic}}</td>
       <td><a href="">Edit</a></td>
       <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
     </tr>
@@ -101,11 +31,38 @@
 </template>
 
 <script>
-import Header from "./header.vue"
+import axios from 'axios'
 
 export default {
   components : {
 
+  },
+  data(){
+    return {
+      dataBlog : [],
+    }
+  },
+  mounted() {
+    this.listData();
+  },
+  methods:{
+    listData(){
+      axios({
+  method: 'GET',
+  url: 'http://localhost:3000/blogs',
+  data: null
+}).then(res =>{
+ this.dataBlog = res.data;
+}).catch(err => {
+  console.log(err)
+})
+    }, deleted(){
+       axios.delete('http://localhost:3000/blogs')
+                .then(response => {
+                    this.dataBlog.splice(id, 4)
+                });
+                console.log(this.dataBlog);
+    }
   }
 }
 </script>

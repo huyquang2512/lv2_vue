@@ -1,10 +1,10 @@
 <template>
   <div class="menu">
     <ul>
-  <li><button>List</button></li>
-  <li><button>New</button></li>
-  <li><button>Search</button></li>
-  <li><button>Edit</button></li>
+  <li><nuxt-link to="/blog"><button>List</button></nuxt-link></li>
+  <li><nuxt-link to="/blogNew"><button>New</button></nuxt-link></li>
+  <li><nuxt-link to="/blogSearch"><button>Search</button></nuxt-link></li>
+  <li><nuxt-link to="/blogEdit"><button>Edit</button></nuxt-link></li>
 </ul>
   </div>
 </template>

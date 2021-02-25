@@ -1,62 +1,43 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="container">
+    <div class="header row">
+        <header-index></header-index>
+          <div class="content1">
+            <menu-index/>
+            <Nuxt />
+        </div>
+    </div>
   </div>
 </template>
-
+<script>
+import Header from "../components/AppHeader/header.vue"
+import Menu from "../components/AppMenu/menu.vue"
+export default {
+  components : {
+    "header-index": Header,
+    "menu-index": Menu,
+  }
+}
+</script>
 <style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+.content{
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+.header{
+  display: flex;
+  width: 100%;
+  height: 100px;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.menua{
+  width: 30%;
+  margin-top: 20px;
+  margin-left: -10px;
+  height: 100px;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.content1{
+  width: 100%;
+  height: auto;
 }
 </style>
